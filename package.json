@@ -1,0 +1,8 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "Easy beautiful slider on vanilla js",
+  "main": "index.html",
+  "author": "Maxim Nadymov",
+  "license": "ISC"
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  transition: all 1s;
+}
+
+.container {
+  width: 80vw;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  position: relative;
+  height: 80vh;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.7s ease-in-out;
+  box-sizing: border-box;
+  filter: brightness(0.5);
+}
+
+.slide-description {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  transition: all 0.3s;
+}
+
+.slide h3 {
+  font-size: 15px;
+  margin: 0 0 0 10px;
+  opacity: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  transition: 0.3s all;
+}
+
+.slide.active {
+  flex: 10;
+  filter: brightness(1);
+}
+
+.slide.active h3 {
+  opacity: 0;
+  animation: fadeLeft 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translate(-20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(10px, 0);
+    opacity: 1;
+  }
+}
